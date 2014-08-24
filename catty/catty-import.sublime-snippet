@@ -1,11 +1,11 @@
 <snippet>
   <content><![CDATA[
-import sdl, base, dynobj
+import sdl, dynobj, MBase
 
 import 
-  core.application, 
-  core.graphics, 
-  core.utils
+  catty.core.application, 
+  catty.core.graphics, 
+  catty.core.utils
 
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

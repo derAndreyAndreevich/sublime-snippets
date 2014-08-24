@@ -3,8 +3,20 @@
 
 type T${1:GameObjectName}* = ref object of TObject
   ${0}
-proc checkEvent*(this: T${1:GameObjectName}, event: sdl.TEvent) = 
-  discard
+proc checkEvent*(this: T${1:GameObjectName}, event: var sdl.TEvent) = 
+  case event.kind
+  of KEYDOWN:
+    case evKeyboard(addr event).keysym.sym
+    of K_UP: 
+      echo "${1} keydown: <UP>"
+    of K_RIGHT:
+      echo "${1} keydown: <RIGHT>"
+    of K_DOWN:
+      echo "${1} keydown: <DOWN>"
+    of K_LEFT:
+      echo "${1} keydown: <LEFT>"
+    else: discard
+  else: discard
 
 proc update*(this: T${1:GameObjectName}) = 
   discard
