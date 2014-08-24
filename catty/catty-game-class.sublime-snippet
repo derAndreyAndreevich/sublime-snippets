@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[
+
+type T${1:GameObjectName}* = ref object of TObject
+  ${0}
+proc checkEvent*(this: T${1:GameObjectName}, event: sdl.TEvent) = 
+  discard
+
+proc update*(this: T${1:GameObjectName}) = 
+  discard
+
+proc draw*(this: T${1:GameObjectName}) = 
+  discard
+
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>catty-game-class</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.nimrod</scope>
+</snippet>

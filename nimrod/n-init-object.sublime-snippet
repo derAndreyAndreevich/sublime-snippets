@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+${1:ObjectName} = T${1:ObjectName}(${0})
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>n-init-object</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.nimrod</scope>
+</snippet>

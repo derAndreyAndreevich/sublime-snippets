@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+variables["${1:name}"] = ${0:value}
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>catty-svar</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.nimrod</scope>
+</snippet>

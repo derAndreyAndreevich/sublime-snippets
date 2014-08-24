@@ -1,0 +1,40 @@
+<snippet>
+  <content><![CDATA[
+application.init(SCREEN_WIDTH, SCREEN_HEIGHT)
+application.setWindowCaption("brain stone")
+
+block gameLoop:
+
+  while true:
+
+    block checkEvents:
+      var event: TEvent
+
+      while pollEvent(addr event) > 0:
+      case event.kind
+      of QUITEV: break gameLoop
+      of KEYDOWN: 
+        case evKeyboard(addr event).keysym.sym
+        of K_ESCAPE: break gameLoop
+        else: discard
+      else: discard
+
+    block update:
+      discard
+
+    block draw:
+      glClear(GL_COLOR_BUFFER_BIT or GL_DEPTH_BUFFER_BIT)
+
+
+
+      sdl.GL_SwapBuffers()
+
+    sdl.delay(10)
+
+application.quit()
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>catty-app</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.nimrod</scope>
+</snippet>
